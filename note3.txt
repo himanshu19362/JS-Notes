@@ -1,0 +1,18 @@
+When we run our code , global execution context is created and JS Engine creates a global object called window .
+Window objects contains many variables and functions which are created by JS Engine. We can access window object from anywhere in the program .
+
+*Anything that is not inside a function is global space.
+
+var variables and function statements that are  in global space is stored in global object.
+
+variable is 'undefined' means that variable has occupied memory but not initialized.
+variable is 'not defined' means that the variable has not occupied any memory.
+
+Javascript is a dynamically typed language : 
+=>In JS , we don't specify the type of data when we are going to store in the variable .
+=>The variables are assigned data types at runtime based on value. 
+
+Javascript is a weakly/loosely typed language because it handles conversions automatically.
+Eg: x = 5; console.log(x + '5')		//55 , here x gets automatically converted to string
+
+

@@ -1,0 +1,39 @@
+Closure is a feature in JS where an inner function has access to the outer functions variables.
+A closure is a combination of function bundled together with surronding lexical environment.
+A closure is a function having access to the parent scope , even after the parent function is closed.
+A function along with reference to the outer environment together is called closure.
+
+Function doesn't form a closure with those variable that are not used in the inner function.
+function x(){
+	var a = 7	
+	function y(){
+		console.log(a)		
+	}
+	return y	
+}
+
+var f = x()
+f()	//It will print 7
+
+When a function returns a function , it doesn't return the function but it returns the closure.
+So , when a outer function returns a inner function , it also contains reference to the variables from the outer scope.
+
+SetTimeout: An asynchronous function that runs the code inside the function some some time.
+The callback function that setTimeout takes is also a closure.
+
+function x(){
+
+	function close(i){
+		setTimeout(()=>{			
+			console.log(i)
+		} , i*1000)
+	}
+
+	for(var i = 0 ; i < 6 ; i++){
+		close(i)	
+	}
+}
+
+x()
+
+This makes sure that 0 1 2 ...5 is printed only using var variables.

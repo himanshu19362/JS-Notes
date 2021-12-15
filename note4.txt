@@ -1,0 +1,35 @@
+Scope means where can we access the variable or function inside our code.
+Lexical Environment : Local Memory And Reference to the lexical Environment of Parent.
+
+So , if our javascript has to find some variable , then it checks the local memory . If the variable is not present in local memory , it goes the lexical environment of parent . Then the local memory of parent is scanned , if variable found then fine else it will go to the lexical environment of its parent as well.
+**By parent , we mean the parent function inside which the current function resides.
+
+Scope Chain : Chain of lexical environments and parent references.
+And this scope chain is used to determine whether a variable or function is present or not.
+
+LET AND CONST
+let and const are hoisted: 
+They occupy memory during the first phase of creation of execution context and are assigned 'undefined' .
+let and const variables declaration also goes to the top of the scope.
+
+Temporal Dead Zone: The time between the let and const variables getting hoisted and being initialized some value.
+If try to access a variable in its temporal dead zone , it will say that the variable is not initiaized.
+
+*** Observation:
+At global scope , all the let and const variables are stored in seperate memory ie..Script object (and not inside the global object) and can only be seen when initialized.
+If try to access let or const variable in temporal dead zone , the let variable will not be shown in inspect/sources in Chrome.
+In rest of the cases , all let and const will be stored in the same object.
+
+Duplicate declaration of let and const are not allowed .It will say its a Syntax Error : the variable has already been declared.
+Redeclaration is only allowed if a var variable is declared again as var variable only .
+
+
+let variables can be re-initialized but not re-declared
+const variables have to initialized when it is being declared inside the code . Also , we can't even reinitialize it. 
+
+
+
+
+
+
+

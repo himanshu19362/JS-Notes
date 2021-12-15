@@ -1,0 +1,15 @@
+Hoisting : It is a phenomena where variable and function declaration(Not initialization) move to the top of their scope.
+Variables and normal functions are hoisted.
+
+But the arrow functions are not hoisted.
+The variable is hoisted but the function is not hoisted.
+
+name()	//Function Call
+var name = ()=>{ }
+
+When we try to call the function before it is initialized , we are not able to access the function . 
+It is because name stores the value 'undefined' and when we call the function , it gives a type error because JS thinks that name is a variable at that point in time but we are calling it as function.
+So , thats why name variable is hoisted but the function is not hoisted.
+=> Arrow functions are not hoisted.
+
+When a function is called , a new execution context is created called functional execution context.This functional execution will similarly be created in 2 phases and it will also have its memory and code component.

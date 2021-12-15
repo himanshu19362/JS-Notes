@@ -1,0 +1,24 @@
+Everything in javascript happens inside the execution context.
+
+Execution context is like a container inside which whole javascript code is executed.
+
+Execution context has two components which are:
+1)Memory Component or Variable Environment: This is where all the variables and functions are stored as key value pair.
+2)Code Component or Thread of Execution: This is where code is executed one line at a time . 
+
+Javascript is a synchronous single threaded language .
+Single threaded : Only one command can be executed at a time.
+Synchronous : The commands are going to get executed in a particular order.
+
+How Javascript code gets executed ?
+When we run our code , an execution context is created. This execution context is created in 2 phases:
+=> In first/Creation Phase  , all the variables are declared (during declaration , it is also assigned its default value 'undefined') whereas functions are declared and they store the entire function inside it.  
+=> In second/Code Execution Phase , all the variables are re-assigned to their actual value.
+
+
+Call Stack : Used to manage multiple execution contexts. It also maintains the order of execution of execution context.
+ 
+
+
+
+

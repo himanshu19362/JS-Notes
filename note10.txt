@@ -1,0 +1,20 @@
+call , apply and bind methods are used for function borrowing.
+
+let person1 = {
+	name:"Sachin",
+	print: function(para){console.log(this.name + para)}
+}
+
+
+let person2 = {
+	name:"John"	
+}
+
+
+person1.print.call(person2 , para)		//This will run print method in person1 on person 2 object.
+//First argument is the object and rest are function parameters
+
+person1.print.apply(person2 , [para.....])	//Only diff , parameters have to be passed in array.
+
+var ans = person1.print.bind(person2 , para)	//This returns a function in which this is replaced by the object passed and the argument values are substituted.
+ans()

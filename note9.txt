@@ -1,0 +1,44 @@
+Javascript Runtime Environment is a big box that contains everything required to run Javascript code.
+
+It has:
+JS Engine
+Some API's to connect with the outer environment.
+Event Loop
+The two Queues.
+
+Our browser also has a Javascript Runtime Environment.
+Even Nodejs is a Javascript Runtime Environment.
+NodeJS is used to run JS outside of browsers as well.
+
+Different JS Engines:
+V8:Runs on Chrome Browser , NodeJS
+Chakra: Microsoft Edge.
+Spidermonkey(First JS Engine):Mozilla Firefox.
+
+JS Engine is not a machine. JS Engine is just a program written in some low level language . For eg:Google V8 engine is written in C++ . It just executes JS code. 
+JS Engine is a software that takes human readable JS code and converts it to low level machine code which is then executed by the CPU.
+
+JS Architecture:
+
+JS Engine first takes in the Javascript code.
+
+Then this code goes through 3 phases.
+
+1) Parsing: In this phase , the code is broken down into tokens. Then Syntax Parser takes these tokens and create a AST(Abstract Syntax Tree).Then AST is taken to the compilation phase.
+
+Javascript has something called JIT(Just In-Time Compilation) . It is a way of compiling code using both interpreter and compiler.
+Javascript was an interpreted language . Now , it is acting both as interpreted language as well as compiled language.
+
+Compiler: It runs the code and tries to make an optimised version of code. And then it is run.
+Interpreter: It just runs the code line by line. V8 uses an interpreter called Ignition
+
+2)Compilation: In this phase , the interpreter takes the AST and it creates byte code and feedback data.Then byte code and feedback data is send to the compiler and the compiler makes certain assumptions based on byte code and feedback and then it produces optimised machine code . If the assumption is wrong , the compiler de-optimises the code and then again it is sent to the interpreter. 
+
+3)Execution Phase : In this phase , the code is executed by the CPU by taking the help of call stack and heap memory.Heap memory is where variables and functions are allocated memory.
+
+Also , heap memory also interacts with Garbage Collector which frees up the memory which is not required.
+
+
+
+
+

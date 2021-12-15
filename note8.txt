@@ -1,0 +1,40 @@
+Web Browsers:
+
+Everything in JS happens in Execution Context.
+Web Api's are functionalities provided to us by the browser that we can access.
+These functionalities/API's are provided to us in the global/window object.
+
+Callbacks are registered in Web API environment.
+Callback/Task Queue: It stores the callback functions that have to be executed.
+Event Loop: It monitors the call stack and callback and microtask queue continuously.
+Microtask Queue: It is similar to callback queue but this has higher priority.
+
+What all comes in Microtask Queue???
+All the callback functions that come through promises and Mutation Observer come in microtask queue.
+
+An example:
+console.log("Start")
+
+setTimeout(function cbT(){
+	console.log("CB Timeout")
+} , 5000)
+
+fetch("https://api/netflix.com")
+.then(function cbF(){
+	console.log("CB Netflix")
+})
+
+console.log("End")
+
+Start is printed initially.
+Then , cbT callback function is registered and when the timer finishes , it is pushed inside the callback queue.
+Then , cbF callback function is registered and when the data is actually received from the server , it will be pushed into microtask queue due to promises.
+Then , End will be printed.
+**Event Loop makes sure that callback function in microtask queue is executed first.
+Then , cbF will be executed because it was present in microtask queue and CB Netflix will be printed.
+Then , finally cbT will be executed and CB Timeout will also be printed.
+
+Read Starvation of Callback Queue
+
+
+

@@ -1,0 +1,44 @@
+Function Statement or Function Declaration: This way of creating a function is called function statement.
+function a(){
+
+}
+
+Function Expression: Assigning function to a variable is called function expression.
+var f = function(){
+
+}
+
+Difference between Function Statement and Function Expression.
+=>Function Statement are hoisted whereas function expression are not hoisted.
+
+Anonymous Functions : Used in places where functions are used as values.
+For eg: In case of function expression , we are using anonymous functions.
+We can also use anonymous functions when we pass it as argument to another function.
+
+Named Function Expression: Function Expression where the anonymous is given some name.
+var b = function xyz(){
+
+}
+
+b()	//Works 
+xyz()	//xyz function is not defined.
+
+Parameter: The values we pass to function when we define it. 
+Argument: The actual value that we pass to function call.
+
+First Class Functions: Ability of a function to be used as value.Functions are also called first class citizens.The reason is same.
+
+CallBack Function: Function that is passed as argument to some function is called callback function.
+
+function attachEventListener(){
+	let count = 0
+	document.getElementById("id").addEventListener('click' , function xyz(){
+		console.log(count)	//Here , xyz is forming closure with count.Closure is used to add privacy to our code.
+	})
+}
+attachEventListener()	
+
+
+//Higher Order Function
+A function that takes function as argument or returns a function are called higher order function.
+Functional Programming : Thinking of logic in terms of functions.

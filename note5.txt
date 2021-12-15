@@ -1,0 +1,31 @@
+A block is also called compound statement.
+It is used to combine multiple statements into one group and it is used in places where javascript expects only one statement.
+
+let and const are block scoped ie... let and const variables are not accessible to the outer scope.
+if there is a var variable , then it would be stored in the memory of outer scope.
+let and const will be stored in the memory of inner/block scope.
+
+Variable Shadowing: When a variable with same name is present in outer scope as well as in inner scope.In inner scope , both the variable scope overlap.
+
+Outer 	Inner
+var 	var	Fine
+var 	let 	Works
+let 	var	Error(Illegal Shadowing)//Both will be in outer scope(both let and var variable with same name can't be present).
+
+
+let a = 5
+{
+	var a = 10	//Illegal Shadowing(Variable is already initialized)
+}
+
+But ,
+let a = 5
+function x(){
+	var a = 10	//This is fine. 
+}
+
+Also , blocks follow scope chain pattern.
+let a = 10
+{
+	console.log()
+}
