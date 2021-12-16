@@ -15,7 +15,7 @@ let 	var	Error(Illegal Shadowing)//Both will be in outer scope(both let and var 
 
 let a = 5
 {
-	var a = 10	//Illegal Shadowing(Variable is already initialized)
+	var a = 10	//Illegal Shadowing(Variable is already declared)
 }
 
 But ,
