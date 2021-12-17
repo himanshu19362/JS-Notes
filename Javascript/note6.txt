@@ -18,7 +18,7 @@ f()	//It will print 7
 When a function returns a function , it doesn't return the function but it returns the closure.
 So , when a outer function returns a inner function , it also contains reference to the variables from the outer scope.
 
-SetTimeout: An asynchronous function that runs the code inside the function some some time.
+SetTimeout: An asynchronous function that runs the code inside the function some time.
 The callback function that setTimeout takes is also a closure.
 
 function x(){

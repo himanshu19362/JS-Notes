@@ -18,7 +18,7 @@ Spidermonkey(First JS Engine):Mozilla Firefox.
 JS Engine is not a machine. JS Engine is just a program written in some low level language . For eg:Google V8 engine is written in C++ . It just executes JS code. 
 JS Engine is a software that takes human readable JS code and converts it to low level machine code which is then executed by the CPU.
 
-JS Architecture:
+JS Engine Architecture:
 
 JS Engine first takes in the Javascript code.
 

@@ -18,3 +18,5 @@ person1.print.apply(person2 , [para.....])	//Only diff , parameters have to be p
 
 var ans = person1.print.bind(person2 , para)	//This returns a function in which this is replaced by the object passed and the argument values are substituted.
 ans()
+
+Pollyfill: Piece of JS code which is used to provide modern functionalities on older that does't support it.
