@@ -1,0 +1,49 @@
+Single Page Applications: 
+It is a web application that loads a single html page along with all the CSS and JS required to run the application. 
+It then uses dynamic techniques(AJAX) to change just the parts of page that is required to be changed (doesn't changes the entire page) , 
+and also making sure that it is not making server calls whenever page is changed.
+
+React uses component architecture: In React , we break everything into components and then we can use these components again and again if required. 
+
+npm is basically a repository where a lot of Javascript code is present that perform some task . 
+
+npm Vs npx:
+npx:it justs runs the package/code stored in npm and doesn't stores it in our device.
+npm:it installs the code in our device and this can be used any number of times as the code is present in our device.
+
+create-react-app : npm package to setup a basic react project.
+
+Props: They are arguments passed to React component which can be used anywhere inside that component.
+State: It basically represents information about a component at a given point time . This state can change because of some kind of human interaction , some HTTP request etc.
+
+React DOM: It is a package that helps us update the DOM efficiently . 
+JSX Interpolation: It is basically a way of writing some JS code inside JSX.
+
+Two methods related to props :
+1) propTypes : defines the type of data that is being passed through props.
+
+For example:
+<Navbar arg1 , arg2 , arg3> 
+Navbar.propTypes = {
+	arg1: PropTypes.string,
+	arg2: PropTypes.string , 
+	...
+}
+
+2) defaultProps: defines the default values of props just in case we don't send some props.
+
+For example:
+Navbar.defaultProps = {
+	arg1: "Apple" , 
+	arg2: "Heading 1" , 
+	...
+}
+
+What are React Hooks ? 
+React Hooks are functions that are provided to us to use React state and lifecycle methods that were present in class based components inside the functional based components.
+
+Use State: Re-renders the component if state of a variable changes .
+const [text , setText] = useState("")
+
+React Router : Used to replace some component with other component.
+
