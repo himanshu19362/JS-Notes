@@ -1,49 +1,50 @@
-Single Page Applications: 
-It is a web application that loads a single html page along with all the CSS and JS required to run the application. 
-It then uses dynamic techniques(AJAX) to change just the parts of page that is required to be changed (doesn't changes the entire page) , 
-and also making sure that it is not making server calls whenever page is changed.
+Single Page Applications: Web Applications which loads the single HTML file along with all the CSS and JS files required for the execution of the website.
 
-React uses component architecture: In React , we break everything into components and then we can use these components again and again if required. 
+After that everything happens in the single HTML file , so we don't have to make server calls again and again to get the new HTML page along with its CSS and JS.
 
-npm is basically a repository where a lot of Javascript code is present that perform some task . 
+Everything happens in single HTML file because the changes that happen in the page are handled using JS because it can make changes directly inside the DOM.
 
-npm Vs npx:
-npx:it justs runs the package/code stored in npm and doesn't stores it in our device.
-npm:it installs the code in our device and this can be used any number of times as the code is present in our device.
+But using plain JS for all this can be very complicated (especilly for making bigger web applications) , so we make use of ReactJS.
 
-create-react-app : npm package to setup a basic react project.
+ReactJS is a JS library which helps in making single page applications easier.
 
-Props: They are arguments passed to React component which can be used anywhere inside that component.
-State: It basically represents information about a component at a given point time . This state can change because of some kind of human interaction , some HTTP request etc.
+What is a Module?
+A module is a function or a group of functions along with some data which are grouped together in a single file and contains code to execute some specific task.
+export default : By default , the content exported using default can be accessed using any name in other file.
+Otherwise we have to access the content using {} inside which we have write the exact name of the variable or the function being exported.
 
-React DOM: It is a package that helps us update the DOM efficiently . 
-JSX Interpolation: It is basically a way of writing some JS code inside JSX.
-
-Two methods related to props :
-1) propTypes : defines the type of data that is being passed through props.
-
-For example:
-<Navbar arg1 , arg2 , arg3> 
-Navbar.propTypes = {
-	arg1: PropTypes.string,
-	arg2: PropTypes.string , 
-	...
+Spread And Rest Operator:
+Rest Operator: Operator used to merge function arguments into an array.
+Eg:
+function f(...args){
+	return args.sort();
 }
 
-2) defaultProps: defines the default values of props just in case we don't send some props.
+Spread Operator:Used when we need all the elements of a function or object.
+Eg:
+const newArray = [...arr , 5 , 10]
 
-For example:
-Navbar.defaultProps = {
-	arg1: "Apple" , 
-	arg2: "Heading 1" , 
-	...
-}
+Destructuring:A way to assign array or object data into separate variables.
+Eg:
+[a , b] = [10 , 20]
+{a , b} = {a:10 , b:20} 
 
-What are React Hooks ? 
-React Hooks are functions that are provided to us to use React state and lifecycle methods that were present in class based components inside the functional based components.
 
-Use State: Re-renders the component if state of a variable changes .
-const [text , setText] = useState("")
+Components : They are re-usable piece of code that can be used again and again.
+Also , it is a javacript function that returns JSX code.
 
-React Router : Used to replace some component with other component.
+React is declarative because we tell machine this is how the project should look like and then React handles how the element should be added or removed
+whereas in imperative way , we also have to define how to do something . For eg. we would have to tell how the element should be added or removed to the machine.
+
+Create React App:It is basically a npm package that sets up a basic react project.
+JSX: It is a syntax that allows us to write HTML in React.
+
+props: Arguments that we pass to a Component.
+Wrapper Component: Custom Component which is used to wrap all the content inside it.
+
+Composition : The approach of building UI from smaller building blocks(smaller components) is called Composition.
+Sometimes , we wouldn't like to configure everything through props rather we would like to pass content between the opening and closing tags.
+So , to make our own wrapper components , we pass the JSX between the tags and inside our wrapper component , we use children props.
+Children props basically renders everything between the tags inside the wrapper component . We use this because Components don't know 
+what will be inside them ahead of time.
 
