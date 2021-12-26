@@ -1,0 +1,45 @@
+JSX Interpolation: It is basically a way of writing some JS code inside JSX.
+
+Two methods related to props :
+1) propTypes : defines the type of data that is being passed through props.
+
+For example:
+<Navbar arg1 , arg2 , arg3> 
+Navbar.propTypes = {
+	arg1: PropTypes.string,
+	arg2: PropTypes.string , 
+	...
+}
+
+2) defaultProps: defines the default values of props just in case we don't send some props.
+
+For example:
+Navbar.defaultProps = {
+	arg1: "Apple" , 
+	arg2: "Heading 1" , 
+	...
+}
+
+State Hook : It is basically used to define the state variables of a component.
+State of a Component : A bunch of values that represent some information about the UI/Component and it may change during the lifecycle of the component. 
+
+Variable declared using the state Hooks are managed by React somewhere in the memory.
+
+When a variable is updated using state Hooks method , it runs the code inside the function again.
+Then it will detect changes from the last time and present the changes on the screen.
+
+When we update the value using state hooks , the value in the variable doesn't get updated immidiately.
+It gets scheduled for later.
+
+If the new state is dependent on the previous state , then use a anonymous function or make separate state variables.
+Eg:setState((prevState) =>{
+	return {...prevState , title: event.target.value}
+})
+
+
+event.preventDefault inside onSubmit of form will prevent the page from reloading.
+
+Two way binding: It means that for inputs , we just don't listen to the changes , but we can also pass the new value back to the input and this new value can be of our choice.
+
+Child to Parent Component Communication: Make a function in the Parent Component and pass it into child component as props and run it there. 
+Using this method , we would be able to access the state of child in parent component.
