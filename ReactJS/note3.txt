@@ -1,0 +1,83 @@
+Stateless/Dumb Component:Component that doesn't manages any state.
+
+Controlled Component:Component where value is passed by the parent and the function that handles the selected value is also present in the parent.
+**Read about controlled component seperately.
+
+Styled Component Package: NPM Package that helps in defining component specific styles.
+
+Limitation of JSX:
+We can only return one root JSX element . We can't return multiple elements side by side inside single component.
+If we have to return multiple JSX Component side by side , then
+1)We can put both the elements in a div or any other element.
+2)Put both the elements inside the array.
+
+How to avoid div soup .
+We can make a wrapper component.
+Wrapper Component: A component which just renders the data between it.
+
+const Wrapper = (props)=>{
+	return props.children
+}
+
+This component can be used to avoid <div> soup.
+
+React provides us with an inbuilt Wrapper Component called Fragment.
+Fragment can be accessed using <React.Fragment></React.Fragment> or <></> 
+So , these Fragments make sure that we end up with less unnecessary HTML code.
+
+Debouncing : A technique where we are making certain API/network calls not at every key stroke but when we pause while typing.
+
+useEffect: A React Hook or a function that runs after component evealuation if one of the dependencies change.
+useEffect is used to perform side effects . Side Effects are tasks that has got nothing to do with the component.
+For Eg: Making API/Network calls , dom manipulation using DOM api provided by the browser.
+
+Clean Up function: Function returned by the useEffect. It is used to cleanup things in the previous execution of the useEffect.
+This function doesn't run the first time .
+But after 1st time , this function is executed first.
+
+useRef: It is a react hook that helps us in storing reference of a DOM element inside a variable and then we can access the current property
+which stores the value inside it. On updating the values in a useRef variable , the component in not re-executed , only that
+particular dom element is changed.
+
+React Portals: It is a ReactDOM method using which we can render child elements into a DOM node outside of parent component.
+
+Virtual DOM: It is a copy of real DOM.
+
+React DOM: It is responsible for taking the React code and then manipulating the Real DOM .
+So , the React DOM takes the difference between old and the new virtual dom and sends it to the ReactDOM.
+
+Reconcilation: Process through which React updates the Real Browser DOM. 
+
+If a parent function is re-executed , then the child function also re-executed.
+To avoid this , we use React.memo().
+
+What is basically does is that it checks the old props values and the new props values , if 
+values of props are same , then the child component isn't re-rendered otherwise its re-rendered.
+We can't use this method on every Component because using it comes at a cost.
+
+useCallback Hook : React hook that allows us to store a function and this function is not 
+created again and again on re-execution of the component.
+
+dependencies in useCallback: The function gets recreated when the dependency or the variable changes.
+
+Batching: When 2 setUpdate function are next to each other , not inside a promise 
+, then those two setUpdates are batched together and the component runs only once.
+
+useCallback can only memorize functions .
+So , to memorize any kind of data , we make use of useMemo react hook.
+
+useReducer hook: also used for state management just like useState but it manages complex states.
+
+dispatch : Method that takes in an action that updates the value of the variable with the help of reducer.
+
+reducer: A method that takes in the previous state and the action and updates the state accordingly. 
+All the changes that can be done on the state variable are handled inside the reducer.
+
+action: An object that has a type attribute which specifies the type of action we want to perform and it may also have some payload/value 
+that we can use.
+
+Context API:It provides a way of passing data down the tree without manually passing the data using props.
+
+useContext: Helps in accessing the data from the context.
+
+
