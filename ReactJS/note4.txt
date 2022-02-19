@@ -1,0 +1,14 @@
+Redux Library: A state management system for cross component or state wide state.
+Reducer: A function that returns the new updated state based on a particular action.
+action: A JS object that tells the type of action we want to perform on our data.
+
+Reducer Function should be a pure function ie... the function with a particular argument will always return the same value.
+The component inside which the store should be accessible should be wrapped with Provider passing the store as prop.
+
+useSelector: Hook that helps in selecting a slice of the state present in store.
+useDispatch: Hook that returns us a dispatch function.
+payload: Extra information that we send inside our action.
+
+=> Never mutate/alter the previous state.
+
+
