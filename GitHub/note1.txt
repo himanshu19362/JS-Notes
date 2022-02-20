@@ -1,0 +1,59 @@
+What is Git : It is a version control system .
+It means that it is a software that helps us in managing different versions of the project.
+So , git is basically used to store the history of the project .
+
+
+What is Github : It is a website that allows us to host our git repository(folder). 
+What is Hosting : It is basically a service through which storage and computing resources are provided to an individual or organization. 
+
+The history of the git repository is stored inside the .git folder .
+
+git status : Tells us which files are modified and which files are not there in the history of the project.
+
+GIT follows 3 stage architecture: Working Directory , Staging Area and Repository
+
+Git Workflow : The project has to go through 2 phases:
+Staging Phase: In this , we specify which untracked or modified files do we want to add to our history and we add them to staging area . 
+Commit Phase: Here , we actually add the files in the staging area inside the history. 
+
+git log: Shows the history of the project.
+
+git stash: It helps in pushing some changes to the backstage . It hides those changes and can be retrieved later.
+
+fork : Creates a copy of a repository inside your own github account.
+
+clone : Creates a folder of the repository inside your local device.(Command : git clone https://github.com/repo_name) 
+
+remote repository : Repository that is stored in Github.
+
+origin: It is a shortname for the remote repository.
+
+upstream url : The place from where we have forked the project.
+
+How to work on a project:
+1) Fork the actual repository.
+2) Then clone the forked project inside your local device .
+3) Then we connect our remote project(copy of actual project that we forked) to the actual project.
+This is done by the command: git remote add upstream <upstream link or link to actual project/repository>
+4) Then we create another branch for adding a new feature .
+5) Finally , if we want to merge our code inside the actual project , we push our code inside the master branch of our project.When we do that ,
+we get an option of sending pull request in our forked project and then we send a pull request.
+
+Also , one pull request can be made for one branch.
+
+How to make sure that forked project is updated when actual project is updated.
+Use command : git pull upstream main
+
+Squashing Commits: It means combining multiple commits into one.
+We use rebase command for that.
+
+Command: git rebase -i 'commit hash above which you want to combine'
+We can either pick or squash commit.
+sqaush will get merged in the pick above.
+
+
+Merge Conflict : Phenomena where multiple developers try to edit the same piece of code.
+
+
+
+
